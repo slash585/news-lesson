@@ -1,0 +1,32 @@
+[[
+  "1",
+  "2"
+],{
+  "id": "3",
+  "name": "4",
+  "email": "5",
+  "password": "6",
+  "whQuestions": "7",
+  "newsToReview": "8"
+},{
+  "id": "9",
+  "name": "10",
+  "email": "11",
+  "password": "6",
+  "whQuestions": "12",
+  "newsToReview": "13"
+},"8c3e2882-c04d-4532-93fa-5d42ae499ea0","Serap","serap@gmail.com","123123",[
+  "14"
+],[],"8d016185-dbe2-4e6d-8e05-1c15363ef566","Bade","bade@gmail.com",[],[],{
+  "id": "15",
+  "teacherId": "3",
+  "teacherName": "4",
+  "questions": "16"
+},"1a6fb8b0-9338-418a-91be-a4d1523d8117",{
+  "who": "17",
+  "where": "18",
+  "when": "19",
+  "why": "20",
+  "what": "21",
+  "how": "22"
+},"İsmail O.","İstanbul","10.12.2020","alcak verecek","cinayet","silahla iki el ateş"]

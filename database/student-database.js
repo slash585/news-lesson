@@ -10,7 +10,7 @@ class StudentDatabase extends BaseDatabase{
                choosedNews.push(fq) 
             }
         })
-        return choosedNews
+        return choosedQuestions
     }
 
     async getByNews(studentId,newsId){
