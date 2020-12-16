@@ -1,0 +1,32 @@
+{
+  "name": "news-lesson",
+  "version": "1.0.0",
+  "description": "A news writing project where students will write news and have it checked",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon --ignore *.json",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slash585/news-lesson.git"
+  },
+  "author": "Mehmet Ali Özdemir <slsh585@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slash585/news-lesson/issues"
+  },
+  "homepage": "https://github.com/slash585/news-lesson#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "flatted": "^3.1.0",
+    "pug": "^3.0.0",
+    "uuid": "^8.3.2"
+  }
+}
