@@ -1,32 +1,239 @@
 [[
-  "1",
-  "2"
+  "1"
 ],{
-  "id": "3",
-  "name": "4",
-  "email": "5",
-  "password": "6",
-  "whQuestions": "7",
-  "newsToReview": "8"
+  "id": "2",
+  "name": "3",
+  "email": "4",
+  "password": "5",
+  "whQuestions": "6",
+  "newsToReview": "7"
+},"87b914bb-8acd-4fee-a669-5964ad0bae5d","Serap","serap@gmail.com","123456",[
+  "8"
+],[
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18"
+],{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "20"
 },{
-  "id": "9",
-  "name": "10",
-  "email": "11",
-  "password": "6",
-  "whQuestions": "12",
-  "newsToReview": "13"
-},"8c3e2882-c04d-4532-93fa-5d42ae499ea0","Serap","serap@gmail.com","123123",[
+  "news": "21",
+  "grade": 10,
+  "comment": "14"
+},{
+  "news": "22",
+  "grade": "13",
+  "comment": "14"
+},{
+  "news": "23",
+  "grade": "13",
+  "comment": "14"
+},[
+  "24"
+],"10","Very good news",[
+  "25",
+  "13",
   "14"
-],[],"8d016185-dbe2-4e6d-8e05-1c15363ef566","Bade","bade@gmail.com",[],[],{
-  "id": "15",
-  "teacherId": "3",
-  "teacherName": "4",
-  "questions": "16"
-},"1a6fb8b0-9338-418a-91be-a4d1523d8117",{
-  "who": "17",
-  "where": "18",
-  "when": "19",
-  "why": "20",
-  "what": "21",
-  "how": "22"
-},"İsmail O.","İstanbul","10.12.2020","alcak verecek","cinayet","silahla iki el ateş"]
+],{
+  "news": "26",
+  "grade": "13",
+  "comment": "14"
+},{
+  "news": "27",
+  "grade": "13",
+  "comment": "14"
+},{
+  "news": "28",
+  "grade": "13",
+  "comment": "14"
+},"1868c5f6-d311-4553-90c1-ead3a397ba32",{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},[
+  "35"
+],[
+  "36"
+],[
+  "37"
+],{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "41",
+  "newsText": "42"
+},[
+  "43"
+],[
+  "44"
+],[
+  "45"
+],[
+  "46"
+],"Cuma I.","Adana","10.12.2020","siyasi anlaşmazlık","cinayet","12 yerinden bıçaklama",{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "47",
+  "newsText": "42"
+},{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "48",
+  "newsText": "42"
+},{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "49",
+  "newsText": "42"
+},"04a67e78-4e62-446e-9f87-d0eb8d33d17e","894e8bfa-3e1c-4437-ab3a-a47dc4d4737c","Mehmet Ali",[
+  "50"
+],"deneme 123",{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "51",
+  "newsText": "42"
+},{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "52",
+  "newsText": "42"
+},{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "53",
+  "newsText": "42"
+},{
+  "id": "38",
+  "studentId": "39",
+  "studentName": "40",
+  "questions": "54",
+  "newsText": "42"
+},[
+  "55"
+],[
+  "56"
+],[
+  "57"
+],{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "58"
+},[
+  "59"
+],[
+  "60"
+],[
+  "61"
+],[
+  "62"
+],{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "63"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "64"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "65"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "66"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "67"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "68"
+},{
+  "id": "19",
+  "teacherId": "2",
+  "teacherName": "3",
+  "questions": "69"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+},{
+  "who": "29",
+  "where": "30",
+  "when": "31",
+  "why": "32",
+  "what": "33",
+  "how": "34"
+}]

@@ -7,7 +7,7 @@ class StudentDatabase extends BaseDatabase{
         const choosedQuestions = []
         student.fetchedQuestions.forEach(fq=>{
             if(fq.id == newsId){
-               choosedNews.push(fq) 
+                choosedQuestions.push(fq) 
             }
         })
         return choosedQuestions

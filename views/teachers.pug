@@ -2,6 +2,11 @@ extends layout
 block content
 
     h2 Teachers
+     p There are #{teachers.length} teachers waiting 
 
+    ol
+     each teacher in teachers
+      li
+       a(href=`/teachers/${teacher.id}`) #{teacher.name} 
        
           

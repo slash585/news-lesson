@@ -1,0 +1,10 @@
+extends layout
+block content
+
+    h2 Student Detail
+     p #{student.name}
+      h4 Questions
+       each questions in student.fetchedQuestions         
+         ol
+          each q in questions
+           li #{q}

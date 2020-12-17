@@ -20,6 +20,7 @@ class Teacher{
 
     viewNews(news,grade,comment){ 
         this.newsToReview.push({news,grade,comment})
+        return this.newsToReview
     }
 
     static create({id,name,email,password,whQuestions,newsToReview}){

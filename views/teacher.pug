@@ -1,0 +1,9 @@
+extends layout
+block content
+
+      h2 Teacher Detail
+       p #{teacher.name}
+        each questions in teacher.whQuestions
+           ul Questions:
+            each q in questions.questions
+             li #{q}  
