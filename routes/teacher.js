@@ -3,7 +3,7 @@ const {studentService,teacherService} = require('../services')
 const router = require('express').Router()
 
 router.get('/', async (req,res)=>{
-    const teachers = await teacherDatabase.load()
+    const teachers = await teacherService.load()
     res.render('teachers',{teachers})
 })
 

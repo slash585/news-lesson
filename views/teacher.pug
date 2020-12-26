@@ -3,7 +3,25 @@ block content
 
       h2 Teacher Detail
        p #{teacher.name}
-        each questions in teacher.whQuestions
-           ul Questions:
+        h3 Questions
+         each questions in teacher.whQuestions
+          ul
+           li Questions Id: #{questions._id}
             each q in questions.questions
-             li #{q}  
+             p who: #{q.who}
+             p when: #{q.when}
+             p how: #{q.how}
+             p what: #{q.what}
+             p where: #{q.where}
+             p why: #{q.why}
+              hr
+        h3 Viewed News
+         each vn in teacher.newsToReview
+          p Grade: #{vn.grade}
+          p Comment: #{vn.comment}
+           each news in vn.news
+            p #{news}  
+
+            //- düzelt
+           
+           

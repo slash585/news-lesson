@@ -8,7 +8,7 @@ Content-Type: application/json
 POST http://localhost:3000/teachers/5fe78c5b4537fa13ac66f54d/createQuestions HTTP/1.1
 Content-Type: application/json
 
-{"who":"deneme","where":"deneme","when":"deneme","why":"deneme","what":"deneme","how":"deneme"}
+{"who":"deneme1","where":"deneme1","when":"deneme1","why":"deneme1","what":"deneme1","how":"deneme1"}
 
 ###
 
