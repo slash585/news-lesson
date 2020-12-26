@@ -1,12 +1,17 @@
-const uuid = require('uuid')
+const mongoose = require('mongoose')
 
-class WhQuestions{
-    constructor(id=uuid.v4(),teacherId,teacherName,questions=[]){
-        this.id = id
-        this.teacherId = teacherId
-        this.teacherName = teacherName
-        this.questions = questions
-    }
-}
+const WhQuestionsSchema = new mongoose.Schema({
+    teacher:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Teachers',
+        autopopulate: {maxDepth:1}
+    },
+    questions:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'News',
+        autopopulate: { maxDepth:1 }
+    }]
+})
 
-module.exports = WhQuestions
+WhQuestionsSchema.plugin(require('mongoose-autopopulate'))
+module.exports = mongoose.model('WhQuestions',WhQuestionsSchema)

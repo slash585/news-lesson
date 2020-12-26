@@ -1,31 +1,27 @@
-const uuid = require('uuid')
-const WhQuestions = require('./wh-questions')
+const mongoose = require('mongoose')
 
-class Teacher{
-    constructor(id=uuid.v4(),name,email,password,whQuestions=[],newsToReview=[]){
-        this.id = id
-        this.name = name
-        this.email = email
-        this.password = password
-        this.whQuestions = whQuestions
-        this.newsToReview = newsToReview
-    }
+const TeacherSchema = new mongoose.Schema({
+    name:{
+        type:String,
+        required: true,
+        minlength:2,
+    },
+    email:{
+        type:String,
+        required: true,
+    },
+    password:{
+        type:String,
+        required: true,
+    },
+    whQuestions:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'WhQuestions',
+        autopopulate: {maxDepth:1}
+    }],
+    newsToReview:[]
+    
+})
 
-    createQuestions({who,where,when,why,what,how}){
-        const questions = new WhQuestions(undefined,this.id,this.name,{who,where,when,why,what,how})
-        this.whQuestions.push(questions)
-
-        return questions
-    }
-
-    viewNews(news,grade,comment){ 
-        this.newsToReview.push({news,grade,comment})
-        return this.newsToReview
-    }
-
-    static create({id,name,email,password,whQuestions,newsToReview}){
-        return new Teacher(id,name,email,password,whQuestions,newsToReview)
-    }
-}
-
-module.exports = Teacher
+TeacherSchema.plugin(require('mongoose-autopopulate'))
+module.exports = mongoose.model('Teachers',TeacherSchema)
