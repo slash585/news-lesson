@@ -6,11 +6,7 @@ const WhQuestionsSchema = new mongoose.Schema({
         ref:'Teachers',
         autopopulate: {maxDepth:1}
     },
-    questions:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'News',
-        autopopulate: { maxDepth:1 }
-    }]
+    questions:[]
 })
 
 WhQuestionsSchema.plugin(require('mongoose-autopopulate'))

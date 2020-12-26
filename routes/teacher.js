@@ -1,5 +1,4 @@
 const {studentService,teacherService} = require('../services')
-const flatted = require('flatted')
 
 const router = require('express').Router()
 
@@ -28,25 +27,23 @@ router.post('/:teacherId/createQuestions',async (req,res)=>{
     const {teacherId} = req.params
     const {who,where,when,why,what,how} = req.body
 
-    const teacher = await teacherService.find(teacherId)
-    teacher.createQuestions({who,where,when,why,what,how})
+    const questions = await teacherService.createQuestions(teacherId,who,where,when,why,what,how)
 
-    await teacherService.update(teacher)
+    await teacherService.update()
 
-    res.send('OK')
+    res.send(questions)
 })
 
 router.post('/:teacherId/viewNews', async (req,res)=>{
     const {teacherId} = req.params
-    const {studentId,newsId,grade,comment} = req.body
+    const {newsId,grade,comment} = req.body
 
-    const teacher = await teacherService.find(teacherId)
-    const news = await studentService.getByNews(studentId,newsId)
-    
-    teacher.viewNews(news,grade,comment)
-    await teacherService.update(teacher)
+    const viewNews = await teacherService.viewNews(newsId,teacherId,grade,comment)
 
-    res.send(news)
+    await teacherService.update()
+
+    res.send(viewNews)
+
 })
 
 module.exports = router
