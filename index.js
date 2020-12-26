@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+require('./mongo-connection')
 
 const indexRouter = require('./routes/index')
 const teachersRouter = require('./routes/teacher')
