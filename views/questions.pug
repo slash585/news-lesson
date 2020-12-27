@@ -1,0 +1,11 @@
+extend layout
+block content
+ h1 Questions
+  h2 #{questions.length}
+   each q in questions
+    a(href=`/questions/${q._id}`)
+     ul 
+      li Teacher name: #{q.teacher.name}
+    
+
+     

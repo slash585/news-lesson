@@ -1,0 +1,10 @@
+extends layout
+block content
+  h1 Teacher Name: #{question.teacher.name}
+    each q in question.questions
+     p who: #{q.who}
+     p when: #{q.when}
+     p how: #{q.how}
+     p what: #{q.what}
+     p where: #{q.where}
+     p why: #{q.why}
