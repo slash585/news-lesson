@@ -7,6 +7,8 @@ const indexRouter = require('./routes/index')
 const teachersRouter = require('./routes/teacher')
 const studentsRouter = require('./routes/student')
 const questionsRouter = require('./routes/questions')
+const newsRouter = require('./routes/news')
+
 
 
 
@@ -17,6 +19,8 @@ app.use('/',indexRouter)
 app.use('/teachers',teachersRouter)
 app.use('/students',studentsRouter)
 app.use('/questions',questionsRouter)
+app.use('/news',newsRouter)
+
 
 app.listen(3000,()=>{
     console.log('started listening')

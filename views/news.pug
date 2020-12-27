@@ -1,0 +1,7 @@
+extends layout
+block content
+    h1 News Page
+     each n in news
+      a(href=`/news/${n._id}`)
+       ul 
+        li #{n._id}
