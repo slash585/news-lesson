@@ -46,4 +46,10 @@ router.post('/:teacherId/viewNews', async (req,res)=>{
 
 })
 
+router.patch('/:teacherId', async (req,res)=>{
+    const {name} = req.body
+    await teacherService.update(req.params.teacherId,{name})
+    res.send('ok')
+})
+
 module.exports = router

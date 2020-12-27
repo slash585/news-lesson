@@ -31,3 +31,17 @@ POST  http://localhost:3000/students/5fe7946699773a1be4554d8a/createNews HTTP/1.
 Content-Type: application/json
 
 {"questionsId":"5fe78e0a99773a1be4554d88","newsText":"deneme"}
+
+###
+
+PATCH  http://localhost:3000/teachers/5fe78c5b4537fa13ac66f54d HTTP/1.1
+Content-Type: application/json
+
+{"name":"Serap"}
+
+###
+
+PATCH  http://localhost:3000/students/5fe7946699773a1be4554d8a HTTP/1.1
+Content-Type: application/json
+
+{"name":"Demir"}

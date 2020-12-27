@@ -39,4 +39,10 @@ router.post('/:studentId/createNews',async (req,res)=>{
     res.send('ok')
 })
 
+router.patch('/:studentId', async (req,res)=>{
+    const {name} = req.body
+    await studentService.update(req.params.studentId,{name})
+    res.send('ok')
+})
+
 module.exports = router
