@@ -15,6 +15,10 @@ export default new Vuex.Store({
     async fetchAllNews(){
       const request = await axios.get('/news')
       return request.data
+    },
+    async fetchTeachers(){
+      const request = await axios.get('/teachers')
+      return request.data
     }
   }
 })

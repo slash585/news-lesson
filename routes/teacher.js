@@ -4,13 +4,13 @@ const router = require('express').Router()
 
 router.get('/', async (req,res)=>{
     const teachers = await teacherService.load()
-    res.render('teachers',{teachers})
+    res.send(teachers)
 })
 
 router.get('/:teacherId',async (req,res)=>{
     const teacher = await teacherService.find(req.params.teacherId)
     if(!teacher) return res.status(404).send("cannot find teacher")
-    res.render('teacher',{teacher})
+    res.send(teacher)
 })
 
 router.post('/',async (req,res)=>{
