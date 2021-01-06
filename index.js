@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
 require('./mongo-connection')
 
 const indexRouter = require('./routes/index')
@@ -14,6 +15,7 @@ const newsRouter = require('./routes/news')
 
 app.set('view engine','pug')
 app.use(bodyParser.json())
+app.use(cors())
 
 app.use('/',indexRouter)
 app.use('/teachers',teachersRouter)
