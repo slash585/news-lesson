@@ -3,12 +3,12 @@ const newsService = require('../services/news-service')
 
 router.get('/', async(req,res)=>{
     const news = await newsService.load()
-    res.render('news', {news})
+    res.send(news)
 })
 
 router.get('/:newsId', async(req,res)=>{
     const newsText = await newsService.find(req.params.newsId)
-    res.render('theNews', {newsText})
+    res.send(newsText)
 })
 
 module.exports = router
