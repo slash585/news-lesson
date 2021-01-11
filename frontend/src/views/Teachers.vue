@@ -30,8 +30,4 @@ div
     ol
       li(v-for="teacher in teachers")
         a(:href="`/teachers/${teacher._id}`") {{teacher.name}}
-
-
-
-
 </template>

@@ -19,6 +19,16 @@ export default new Vuex.Store({
     async fetchTeachers(){
       const request = await axios.get('/teachers')
       return request.data
+    },
+    async fetchTeacher(ctx, teacherId){
+      const request = await axios.get(`/teachers/${teacherId}`)
+      return request.data
+    },
+    async createQuestions(ctx,{teacherId,who,where,when,why,what,how}){
+      const request = await axios.post(`/teachers/${teacherId}/createQuestions`,{
+        who,where,when,why,what,how
+      })
+      return request.data
     }
   }
 })

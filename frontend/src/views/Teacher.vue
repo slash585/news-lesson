@@ -1,10 +1,63 @@
 <script>
+import {mapActions} from 'vuex'
 export default {
-  name:"Teacher"
+  name:"Teacher",
+  data(){
+    return{
+      isLoading : true,
+      teacher : {},
+      who: "",
+      where: "",
+      what: "",
+      when: "",
+      what: "",
+      how: ""
+    }
+  },
+  async mounted(){
+    await this.updateTeacher()
+    this.isLoading = false    
+  },
+  methods: {
+    ...mapActions(['fetchTeacher','createQuestions']),
+    async createQuestionsAndUpdateTeacher(who,where,when,why,what,how){
+      await this.createQuestions({teacherId:this.teacher._id,who:who,where:where,when:when,why:why,what:what,how:how})
+      await this.updateTeacher()
+    },
+    async updateTeacher(){
+      this.teacher = await this.fetchTeacher(this.$route.params.teacherId)
+    }
+  }
 }
 </script>
 
 <template lang="pug">
 div
-  h1 Teacher
+  h1 {{teacher.name}}
+  h2 Questions
+  div.questions(v-for="questions in teacher.whQuestions")
+    p Questions Id: {{questions._id}}
+    div(v-for="q in questions.questions")
+      p {{q.who}}
+      p {{q.where}}
+      p {{q.when}}
+      p {{q.why}}
+      p {{q.what}}
+      p {{q.how}}
+  .createQuestions 
+    h3 Create Questions
+    form 
+      input(v-model="who" placeholder="who")
+      input(v-model="where" placeholder="where")
+      input(v-model="when" placeholder="when")
+      input(v-model="why" placeholder="why")
+      input(v-model="what" placeholder="what")
+      input(v-model="how" placeholder="how")
+      button(@click="createQuestionsAndUpdateTeacher(who,where,when,why,what,how)") Create
+      
+      
+      
+      
+      
+  
 </template>
