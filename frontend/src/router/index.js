@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Teachers from '../views/Teachers.vue'
 import Students from '../views/Students.vue'
 import Teacher from '../views/Teacher.vue'
+import Student from '../views/Student.vue'
 
 
 
@@ -29,6 +30,11 @@ const routes = [
     path: '/teachers/:teacherId',
     name: 'Teacher',
     component: Teacher
+  },
+  {
+    path:'/students/:studentId',
+    name: 'Stundet',
+    component: Student
   }
 
 ]

@@ -28,5 +28,5 @@ div
     p There are {{students.length}} registered students
     ol
       li(v-for="student in students")
-        a(:href="`/students/${student._id})`") {{student.name}} 
+        a(:href="`/students/${student._id}`") {{student.name}} 
 </template>

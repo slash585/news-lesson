@@ -33,6 +33,14 @@ export default new Vuex.Store({
     async fetchStudents(){
       const request = await axios.get('/students')
       return request.data
+    },
+    async fetchStudent(ctx, studentId){
+      const request = await axios.get(`/students/${studentId}`)
+      return request.data
+    },
+    async fetchAllQuestions(){
+      const request = await axios.get(`/questions`)
+      return request.data
     }
   }
 })
