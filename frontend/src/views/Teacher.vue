@@ -38,12 +38,12 @@ div
   div.questions(v-for="questions in teacher.whQuestions")
     p Questions Id: {{questions._id}}
     div(v-for="q in questions.questions")
-      p {{q.who}}
-      p {{q.where}}
-      p {{q.when}}
-      p {{q.why}}
-      p {{q.what}}
-      p {{q.how}}
+      h6 Who: {{q.who}}
+      h6 Where: {{q.where}}
+      h6 When: {{q.when}}
+      h6 Why: {{q.why}}
+      h6 What: {{q.what}}
+      h6 How: {{q.how}}
   .createQuestions 
     h3 Create Questions
     form 

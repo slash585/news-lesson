@@ -6,14 +6,14 @@ const router = require('express').Router()
 
 router.get('/', async(req,res)=>{
     const students = await studentService.load()
-    res.render('students', {students})
+    res.send(students)
     
 })
 
 router.get('/:studentId',async (req,res)=>{
     const student = await studentService.find(req.params.studentId)
     if(!student) return res.status(404).send('cannot find student')
-    res.render('student', {student} )
+    res.send(student)
 })
 
 router.post('/',async (req,res)=>{

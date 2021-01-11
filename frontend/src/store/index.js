@@ -29,6 +29,10 @@ export default new Vuex.Store({
         who,where,when,why,what,how
       })
       return request.data
+    },
+    async fetchStudents(){
+      const request = await axios.get('/students')
+      return request.data
     }
   }
 })
