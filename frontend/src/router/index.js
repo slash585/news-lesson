@@ -5,6 +5,7 @@ import Teachers from '../views/Teachers.vue'
 import Students from '../views/Students.vue'
 import Teacher from '../views/Teacher.vue'
 import Student from '../views/Student.vue'
+import CreateNews from '../views/CreateNews.vue'
 
 
 
@@ -35,6 +36,11 @@ const routes = [
     path:'/students/:studentId',
     name: 'Stundet',
     component: Student
+  },
+  {
+    path:'/students/:studentId/createNews/:questionsId',
+    name: 'CreateNews',
+    component: CreateNews
   }
 
 ]

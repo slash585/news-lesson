@@ -37,7 +37,6 @@ div
      br
      hr
     
-
    
 
 </template>

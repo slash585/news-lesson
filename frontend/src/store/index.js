@@ -41,6 +41,17 @@ export default new Vuex.Store({
     async fetchAllQuestions(){
       const request = await axios.get(`/questions`)
       return request.data
+    },
+    async fethQuestion(ctx,questionsId){
+      const request = await axios.get(`/questions/${questionsId}`)
+      return request.data
+    },
+    async createNews(ctx,{studentId,questionsId,newsText}){
+      const request = await axios.post(`/students/${studentId}/createNews`,{
+        questionsId,newsText
+      })
+
+      return request.data
     }
   }
 })
