@@ -8,18 +8,21 @@ export default {
       teacher : {},
       who: "",
       where: "",
-      what: "",
+      why: "",
       when: "",
       what: "",
-      how: ""
+      how: "",
+      news: []
     }
   },
   async mounted(){
     await this.updateTeacher()
+    this.news = await this.fetchAllNews()
+    console.log(this.news)
     this.isLoading = false    
   },
   methods: {
-    ...mapActions(['fetchTeacher','createQuestions']),
+    ...mapActions(['fetchTeacher','createQuestions','fetchAllNews']),
     async createQuestionsAndUpdateTeacher(who,where,when,why,what,how){
       await this.createQuestions({teacherId:this.teacher._id,who:who,where:where,when:when,why:why,what:what,how:how})
       await this.updateTeacher()
@@ -54,10 +57,10 @@ div
       input(v-model="what" placeholder="what")
       input(v-model="how" placeholder="how")
       button(@click="createQuestionsAndUpdateTeacher(who,where,when,why,what,how)") Create
-      
-      
-      
-      
-      
-  
+      hr
+  .viewNews(v-for="n in news")
+    h6 {{n.student.name}}
+    p {{n.newsText}}
+    a(:href="`/teachers/${teacher._id}/${n._id}/viewNews`") View News
+    
 </template>

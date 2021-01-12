@@ -52,6 +52,10 @@ export default new Vuex.Store({
       })
 
       return request.data
+    },
+    async fetchAllNews(){
+      const request = await axios.get('/news')
+      return request.data
     }
   }
 })
